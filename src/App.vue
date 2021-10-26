@@ -1,5 +1,7 @@
 <template>
-  <div id="app"></div>
+  <div id="app">
+    <div class="test">111</div>
+  </div>
 </template>
 
 <script>
@@ -9,13 +11,10 @@ export default {
 </script>
 
 <style lang="scss">
-body,
-html {
-  padding: 0;
-  margin: 0;
-}
-#app {
-  width: 100%;
-  height: 100%;
+.test {
+  width: 840px;
+  height: 840px;
+  background-color: red;
+  font-size: 24px;
 }
 </style>

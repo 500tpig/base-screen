@@ -5,7 +5,16 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = '沙县大屏' // page title
+const name = 'base-screen' // page title
+
+// 引入等比适配插件
+const px2rem = require('postcss-px2rem')
+
+// 配置基本大小
+const postcss = px2rem({
+  // 基准大小 baseSize，需要和rem.js中相同
+  remUnit: 80
+})
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -44,7 +53,13 @@ module.exports = {
     //     }
     //   }
     // }
-    // before: require('./mock/mock-server.js')
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [postcss]
+      }
+    }
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
@@ -105,11 +120,11 @@ module.exports = {
             priority: 10,
             chunks: 'initial' // only package third parties that are initially dependent
           },
-          elementUI: {
-            name: 'chunk-elementUI', // split elementUI into a single package
-            priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
-            test: /[\\/]node_modules[\\/]_?element-ui(.*)/ // in order to adapt to cnpm
-          },
+          // elementUI: {
+          //   name: 'chunk-elementUI', // split elementUI into a single package
+          //   priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+          //   test: /[\\/]node_modules[\\/]_?element-ui(.*)/ // in order to adapt to cnpm
+          // },
           commons: {
             name: 'chunk-commons',
             test: resolve('src/components'), // can customize your rules
