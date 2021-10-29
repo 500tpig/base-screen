@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-  <div class="app-container">
+  <div id="index" ref="appRef">
     <Map />
     <!-- <div id="myChart" class="chart"></div> -->
   </div>
@@ -8,8 +8,11 @@
 
 <script>
 import Map from '@/components/Map'
+import drawMixin from '@/util/drawMixin'
+
 export default {
   components: { Map },
+  mixins: [drawMixin],
   props: {},
   data() {
     return {}

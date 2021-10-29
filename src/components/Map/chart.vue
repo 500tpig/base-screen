@@ -3,6 +3,7 @@
     <div class="chart-container" :style="{ backgroundImage: `url(${shaXianImg})` }">
       <BaseChart :options="options" height="100%" width="100%" class="chart" />
     </div>
+    <div>sss</div>
   </div>
 </template>
 
@@ -23,7 +24,7 @@ export default {
   // 定义配置数据
   data() {
     // eslint-disable-next-line object-curly-spacing
-    return { options: {}, shaXianImg: require('@/assets/沙县地图1.png') }
+    return { options: {}, shaXianImg: require('@/assets/image/沙县地图1.png') }
   }, // 进行监听，也可以使用 computed 计算属性实现此功能
   watch: {
     cdata: {
@@ -122,8 +123,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .chart-container {
-  width: 500px;
-  height: 500px;
+  width: 1000px;
+  height: 1000px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

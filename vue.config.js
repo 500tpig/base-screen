@@ -7,14 +7,14 @@ function resolve(dir) {
 
 const name = 'base-screen' // page title
 
-// 引入等比适配插件
-const px2rem = require('postcss-px2rem')
+// // 引入等比适配插件
+// const px2rem = require('postcss-px2rem')
 
-// 配置基本大小
-const postcss = px2rem({
-  // 基准大小 baseSize，需要和rem.js中相同
-  remUnit: 80
-})
+// // 配置基本大小
+// const postcss = px2rem({
+//   // 基准大小 baseSize，需要和rem.js中相同
+//   remUnit: 80
+// })
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
@@ -54,13 +54,13 @@ module.exports = {
     //   }
     // }
   },
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: [postcss]
-      }
-    }
-  },
+  // css: {
+  //   loaderOptions: {
+  //     postcss: {
+  //       plugins: [postcss]
+  //     }
+  //   }
+  // },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
