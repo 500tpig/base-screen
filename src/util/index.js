@@ -52,3 +52,10 @@ export function formatTime(time, fmt) {
     return fmt
   }
 }
+
+export function fontSize(res) {
+  const clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+  if (!clientWidth) return
+  const fontSize = 100 * (clientWidth / 1920)
+  return res * fontSize
+}

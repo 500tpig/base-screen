@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <div class="test">111</div>
+    <main-screen />
   </div>
 </template>
 
 <script>
+import mainScreen from '@/views/main-screen'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { mainScreen }
 }
 </script>
 
-<style lang="scss">
-.test {
-  width: 840px;
-  height: 840px;
-  background-color: red;
-  font-size: 24px;
-}
-</style>
+<style lang="scss"></style>
