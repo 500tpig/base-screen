@@ -6,16 +6,6 @@ function resolve(dir) {
 }
 
 const name = 'base-screen' // page title
-
-// // 引入等比适配插件
-// const px2rem = require('postcss-px2rem')
-
-// // 配置基本大小
-// const postcss = px2rem({
-//   // 基准大小 baseSize，需要和rem.js中相同
-//   remUnit: 80
-// })
-
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
 // For example, Mac: sudo npm run

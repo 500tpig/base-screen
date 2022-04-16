@@ -1,17 +1,12 @@
 <!--  -->
 <template>
-  <div id="index" ref="appRef">
-    <Map />
-    <!-- <div id="myChart" class="chart"></div> -->
-  </div>
+  <div id="index" ref="appRef">ss</div>
 </template>
 
 <script>
-import Map from '@/components/Map'
 import drawMixin from '@/util/drawMixin'
 
 export default {
-  components: { Map },
   mixins: [drawMixin],
   props: {},
   data() {
@@ -33,7 +28,4 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-//@import url(); 引入公共css类
-@import '@/styles/variables.scss';
-</style>
+<style lang="scss" scoped></style>

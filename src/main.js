@@ -2,9 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 Vue.config.productionTip = false
 
-// 引入自适应函数
-// import '@/util/rem'
-
 // 全局样式和变量等
 import '@/assets/styles/index.scss'
 
